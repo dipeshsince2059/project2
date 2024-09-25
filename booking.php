@@ -48,7 +48,7 @@ if(!isset($_SESSION['uid'])){
           <h2>Ticket Booking for Theater</h2>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
           <form action="booking.php" method="post" >
@@ -63,14 +63,31 @@ if(!isset($_SESSION['uid'])){
                 <div class="col form-group mb-3">
                   <input type="date" class="form-control" name="date"  required="">
                 </div>
+                <div class="form-group">
+                        <select name="catid" class="form-control">
+                            <option value="">Select Movie Hall</option>
+                            <?php
+                            $sql = "SELECT * FROM `theater`";
+                            $res = mysqli_query($con, $sql);
+                            if (mysqli_num_rows($res) > 0) {
+                                while ($data = mysqli_fetch_array($res)) {
+                                    echo "<option value=\"{$data['theaterid']}\"> {$data['theater_name']} </option>";   
+                                }
+                            } else {
+                                echo "<option value=\"\">No Cinema Hall found</option>";  
+                            }  
+                            ?> 
+                        </select>
+                    </div>
+             <br>
 
              
-          
-
-              <div class="text-center"><button type="submit" class="btn btn-primary" name="ticketbook">Ticket Book</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-primary" name="ticketbook">Ticket Book</button>
+              <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Select Seat</button></div>
+              <div class="text-center"> NOTE: Your Prefered Seat cost More than The Ordinary SEat <div>
             </form>
           </div>
-
+          
         
 
         </div>

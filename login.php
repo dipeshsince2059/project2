@@ -32,15 +32,14 @@
 <section id="team" class="team section-bg">
       <div class="container aos-init aos-animate" data-aos="fade-up">
 
-        <div class="section-title">
+        <div class="section-title d-flex w-100 justify-content-center">
           <h2>Login Admin / User</h2>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
         
-          <center>
           <form action="login.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 
@@ -59,7 +58,6 @@
               </div>
            
             </form>
-          </center>
          
           </div>
 

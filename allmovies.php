@@ -35,22 +35,23 @@
                                   while($data = mysqli_fetch_array($res)){
 
                                 ?>
+<div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="member">
+        <div class="member-img">
+            <img src="admin/uploads/<?= $data['image'] ?>" style="height:250px !important; width:250px !important;" alt="">
+            <div class="social">
+                <a href="admin/uploads/<?= $data['trailer'] ?>" target="_blank" class="btn btn-primary" style="width:150px;">Watch Trailer</a>
+                <a href="booking.php?movieid=<?= $data['movieid'] ?>" class="btn btn-secondary" style="width:150px;">Book Now</a>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4><?= $data['title'] ?></h4>
+            <span><?= $data['catname'] ?></span>
+        </div>
+    </div>
+</div>
 
-                              <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                <div class="member">
-                                  <div class="member-img">
-                                    <img src="admin/uploads/<?= $data['image'] ?>"  style="height:250px !important; width:250px !important;" alt="">
-                                    <div class="social">
-                                      <a href="admin/uploads/<?= $data['trailer'] ?>" target="_blank"  class="btn btn-primary" style="width:150px;">Watch Trailer</a>
-                                    
-                                    </div>
-                                  </div>
-                                  <div class="member-info">
-                                    <h4><?= $data['title'] ?></h4>
-                                    <span><?= $data['catname'] ?></span>
-                                  </div>
-                                </div>
-                    </div>
+                              
 
           <?php
             }
@@ -79,21 +80,22 @@
 
                                 ?>
 
-                              <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                <div class="member">
-                                  <div class="member-img">
-                                    <img src="admin/uploads/<?= $data['image'] ?>"  style="height:250px !important; width:250px !important;" alt="">
-                                    <div class="social">
-                                      <a href="admin/uploads/<?= $data['trailer'] ?>" target="_blank"  class="btn btn-primary" style="width:150px;">Watch Trailer</a>
-                                    
-                                    </div>
-                                  </div>
-                                  <div class="member-info">
-                                    <h4><?= $data['title'] ?></h4>
-                                    <span><?= $data['catname'] ?></span>
-                                  </div>
-                                </div>
-                    </div>
+<div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+    <div class="member">
+        <div class="member-img">
+            <img src="admin/uploads/<?= $data['image'] ?>" style="height:250px !important; width:250px !important;" alt="">
+            <div class="social">
+                <a href="admin/uploads/<?= $data['trailer'] ?>" target="_blank" class="btn btn-primary" style="width:150px;">Watch Trailer</a>
+                <a href="booking.php?movieid=<?= $data['movieid'] ?>" class="btn btn-secondary" style="width:150px;">Book Now</a>
+            </div>
+        </div>
+        <div class="member-info">
+            <h4><?= $data['title'] ?></h4>
+            <span><?= $data['catname'] ?></span>
+        </div>
+    </div>
+</div>
+
 
           <?php
             }

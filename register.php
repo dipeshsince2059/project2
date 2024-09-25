@@ -35,7 +35,7 @@
           <h2>Register for Booking Ticket</h2>
         </div>
 
-        <div class="row">
+        <div class="row d-felx justify-content-center">
 
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
           <form action="register.php" method="post" role="form" class="php-email-form">
